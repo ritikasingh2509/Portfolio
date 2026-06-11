@@ -41,7 +41,7 @@ A project focused on practical web development concepts and user-friendly design
 
 ## 🚀 Live Demo
 
-Coming Soon
+https://portfoliowebsiteritika.netlify.app/
 
 ---
 
