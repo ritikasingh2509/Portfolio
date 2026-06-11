@@ -203,47 +203,47 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Handle Form Submission
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+  // contactForm.addEventListener('submit', (e) => {
+  //   e.preventDefault();
     
-    // Validate all fields
-    let formIsValid = true;
-    formInputs.forEach(input => {
-      const fieldValid = validateField(input);
-      if (!fieldValid) {
-        formIsValid = false;
-      }
-    });
+  //   // Validate all fields
+  //   let formIsValid = true;
+  //   formInputs.forEach(input => {
+  //     const fieldValid = validateField(input);
+  //     if (!fieldValid) {
+  //       formIsValid = false;
+  //     }
+  //   });
 
-    if (formIsValid) {
-      // Mock API call submit delay
-      const submitBtn = document.getElementById('contact-submit-btn');
-      const submitBtnText = submitBtn.querySelector('span');
-      const submitBtnIcon = submitBtn.querySelector('.btn-icon');
+  //   if (formIsValid) {
+  //     // Mock API call submit delay
+  //     const submitBtn = document.getElementById('contact-submit-btn');
+  //     const submitBtnText = submitBtn.querySelector('span');
+  //     const submitBtnIcon = submitBtn.querySelector('.btn-icon');
       
-      // Save original state
-      const originalText = submitBtnText.innerText;
+  //     // Save original state
+  //     const originalText = submitBtnText.innerText;
       
-      // Update styling to loading state
-      submitBtn.disabled = true;
-      submitBtnText.innerText = 'Sending...';
+  //     // Update styling to loading state
+  //     submitBtn.disabled = true;
+  //     submitBtnText.innerText = 'Sending...';
       
-      setTimeout(() => {
-        // Show success animation overlay
-        successOverlay.classList.remove('hidden');
+  //     setTimeout(() => {
+  //       // Show success animation overlay
+  //       successOverlay.classList.remove('hidden');
         
-        // Reset button
-        submitBtn.disabled = false;
-        submitBtnText.innerText = originalText;
+  //       // Reset button
+  //       submitBtn.disabled = false;
+  //       submitBtnText.innerText = originalText;
         
-        // Clear all inputs
-        contactForm.reset();
-        formInputs.forEach(input => {
-          input.closest('.form-group').classList.remove('invalid');
-        });
-      }, 1200);
-    }
-  });
+  //       // Clear all inputs
+  //       contactForm.reset();
+  //       formInputs.forEach(input => {
+  //         input.closest('.form-group').classList.remove('invalid');
+  //       });
+  //     }, 1200);
+  //   }
+  // });
 
   // Close success overlay
   successCloseBtn.addEventListener('click', () => {
